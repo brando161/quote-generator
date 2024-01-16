@@ -7,6 +7,18 @@ const loader = document.getElementById("loader");
 
 let apiQuotes = [];
 
+// Show Loading
+const loading = () => {
+    loader.hidden = false;
+    quoteContainer.hidden = true;
+}
+
+// Hide Loading
+// const complete = () => {
+//     loader.hidden = true;
+//     quoteContainer.hidden = false;
+// }
+
 // Show New Quote
 const newQuote = () => {
     // Pick a random quote from the apiQuotes array
@@ -49,4 +61,5 @@ newQuoteBtn.addEventListener("click", newQuote);
 twitterBtn.addEventListener("click", tweetQuote);
 
 // On Load
-getQuotes();
+// getQuotes();
+loading();
